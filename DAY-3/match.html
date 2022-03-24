@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<script>
+function myfun()
+{
+var val1=document.getElementById("name1").value;
+console.log(val1);
+var val2=document.getElementById("name2").value;
+console.log(val2);
+var val3=document.getElementById("score1").value;
+console.log(val3);
+var val4=document.getElementById("score2").value;
+console.log(val4);
+if(val1==val2)
+{
+alert('Invalid Input');
+}
+else
+{
+const x=val3.split("/");
+const y=val4.split("/");
+if(x[1]<10 || y[1]<10)
+{
+if(x[0]>y[0])
+{
+var z=x[0]-y[0];
+document.write(val1+ 'is won by' +z);
+}
+else if(x[0]<b[0])
+{
+var w=y[0]-x[0];
+document.write(val2+ 'is won by' +w);
+}
+}
+else
+{
+document.write('Wicket should be smaller than 10');
+}
+}
+}
+</script>
+
+</head>
+<body>
+<p></p>  
+<form>
+Enter the Team Name 1:
+Score 1:<br>
+<input type="text" id="name1" name="name1" placeholder="Enter Team Name" required>
+<input type="text" id="score1" name="score1" placeholder="score" required><br></br>
+Enter the Team Name 2:
+Score 2:<br>
+<input type="text" id="name2" name="name2" placeholder="Enter Team Name" required>
+<input type="text" id="score2" name="score2" placeholder="score" required><br></br>
+<input type="submit" value="Result" onclick="myfun()">
+</form>
+</body>
+</html>
